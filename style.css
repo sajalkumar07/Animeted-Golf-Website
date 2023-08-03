@@ -10,7 +10,14 @@ html,body{
     width: 100%;
 
 }
-
+#cursor{
+    height:15px;
+    width: 15px;
+    background-color: #e1ff00;
+    border-radius:20px;
+    z-index: 1;
+    position: fixed;
+}
 #nav{
     height: 10px;
     width: 100%;
@@ -21,6 +28,7 @@ html,body{
     align-items: center;
     position: fixed;
     z-index: 1;
+    
 }
 #image-logo img{
     height: 80px;
@@ -51,6 +59,7 @@ video{
     font-size: 130px;
     width: 80%;
     position: relative;
+
 }
 #page1 h1::before{
     content: "EAT. DRINK. PLAY.";
@@ -58,7 +67,7 @@ video{
     color: rgb(0, 0, 0);
     top: -5px;
     right: 10px;
-    -webkit-text-stroke: 2px  rgb(170, 255, 0);
+    -webkit-text-stroke: 2px #e1ff00;
     z-index: -1;
     
 }
@@ -69,4 +78,8 @@ video{
     padding-top: 20px;
     font-size: 17px;
     width: 40%;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
 }
