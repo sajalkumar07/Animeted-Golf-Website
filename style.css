@@ -13,10 +13,19 @@ html,body{
 #cursor{
     height:15px;
     width: 15px;
-    background-color: #e1ff00;
-    border-radius:20px;
+    background-color:  rgba(170, 255, 0, 0.847);
+    border-radius:50px;
     z-index: 1;
     position: fixed;
+}
+#cursor-background-blur{
+    height:300px;
+    width: 300px;
+    background-color: #e1ff0056;
+    border-radius:50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 1;
 }
 #nav{
     height: 10px;
@@ -27,7 +36,8 @@ html,body{
     padding: 50px 100px;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
+    
     
 }
 #image-logo img{
@@ -58,6 +68,7 @@ video{
 #page1 h1{
     font-size: 130px;
     width: 80%;
+    font-weight: 900;
     position: relative;
 
 }
@@ -67,7 +78,7 @@ video{
     color: rgb(0, 0, 0);
     top: -5px;
     right: 10px;
-    -webkit-text-stroke: 2px #e1ff00;
+    -webkit-text-stroke: 2px  rgba(170, 255, 0, 0.847);
     z-index: -1;
     
 }
@@ -82,4 +93,40 @@ video{
 #page2{
     height: 100vh;
     width: 100%;
+}
+#move{
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#move-sidescroll{
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;    
+}
+
+#move h1{
+    display: inline-block;
+    font-size: 110px;
+    font-weight: 900;
+    margin-right: 30px;
+    font-family: sans-serif;
+    color: transparent;
+    transition: .2s;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+  
+}
+ @keyframes scroll {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(-100%);
+    }
+} 
+#move h1:hover{
+    color:  rgba(170, 255, 0, 0.847);
+    -webkit-text-stroke:  rgba(170, 255, 0, 0.847);
 }

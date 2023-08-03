@@ -1,7 +1,11 @@
 var cursor = document.querySelector("#cursor")
+var blur = document.querySelector("#cursor-background-blur")
+
 document.addEventListener("mousemove", function(dets){
-    cursor.style.left = dets.x+"px"
-    cursor.style.top = dets.y+"px"
+    cursor.style.left = dets.x + "px"
+    cursor.style.top = dets.y + "px"
+    blur.style.left = dets.x - 150 +"px"
+    blur.style.top = dets.y - 150 +"px"
 })
 
 gsap.to("#nav",{
