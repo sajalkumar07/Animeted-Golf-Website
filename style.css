@@ -1,9 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: white
-    
+    color: white   
 }
 html,body{
     height: 100%;
@@ -17,15 +17,17 @@ html,body{
     border-radius:50px;
     z-index: 99;
     position: fixed;
+    transition: linear 0.1s;
 }
 #cursor-background-blur{
     height:400px;
     width: 400px;
-    background-color: #e1ff002e;
+    background-color: #e1ff0038;
     border-radius:50%;
     position: fixed;
     filter: blur(90px);
     z-index: 1;
+    transition: linear .5s;
 }
 #nav{
     height: 10px;
@@ -76,7 +78,6 @@ video{
     width: 80%;
     font-weight: 900;
     position: relative;
-
 }
 #page1 h1::before{
     content: "EAT. DRINK. PLAY.";
@@ -95,9 +96,10 @@ video{
     padding-top: 20px;
     font-size: 17px;
     width: 40%;
+    font-weight: 200;
 }
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 #move{
@@ -134,4 +136,105 @@ video{
 #move h1:hover{
     color:  rgba(170, 255, 0, 0.847);
     -webkit-text-stroke:  rgba(170, 255, 0, 0.847);
+}
+#about-section{
+    height: 50vh;
+    width: 100%;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 70px;
+}
+#about-section img{
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+#img-one{
+    height: 160px;
+    width: 160px;
+}
+#img-two{
+    height: 210px;
+    width: 150px;
+}
+#about-us{
+    width: 60%;
+}
+#about-section h3{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#about-section p{
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 40px;
+}
+#card-section{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+.card{
+    width: 340px;
+    height: 500px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#card-one{
+    background-image: url(Assets/card1.webp);
+
+}
+#card-two{
+    background-image: url(Assets/card2.webp);
+}
+#card-three{
+    background-image: url(Assets/card3.webp);
+}
+/* #overlay-text{
+    width: 180px;
+    margin-left: 30px;
+    margin-top: 50vh;
+    font-size: 40px;
+} */
+#overlay-hover{
+    background-color: rgb(152, 217, 23);
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 20px;
+    /* transform: translateX(-500px); */
+    opacity: 0;
+    transition: .5s;
+}
+#overlay-hover h4{
+    color: black;
+    margin-top: 50px;
+    font-size: 34px;
+}
+#overlay-hover p{
+    color: black;
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+#gap{
+    margin-top: 20px;
+}
+.card:hover #overlay-hover{
+    opacity: 1;
+    /* transform: translateX(0px); */
 }
