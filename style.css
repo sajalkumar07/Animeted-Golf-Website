@@ -193,6 +193,7 @@ video{
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    transition: .6s;
 }
 #card-one{
     background-image: url(Assets/card1.webp);
@@ -237,4 +238,27 @@ video{
 .card:hover #overlay-hover{
     opacity: 1;
     /* transform: translateX(0px); */
+}
+.card:hover{
+    transform: rotate3d(-1,-1,0,10deg);
+}
+#middle-div{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, rgb(43, 145, 3), rgba(152, 217, 23));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#middle-div h4{
+    color: black;
+    font-size: 30px;
+    line-height: 45px;
+}
+#middle-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 12%;
+    opacity: .5;
 }
